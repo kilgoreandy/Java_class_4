@@ -24,6 +24,8 @@ public class Contact {
         this.phone = phone;
     }
 
+    public Contact() {
+    }
 
     /**
      * Establish getters and setters
