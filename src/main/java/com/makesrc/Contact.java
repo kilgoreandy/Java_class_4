@@ -23,7 +23,7 @@ public class Contact {
         this.email = email;
         this.phone = phone;
     }
-
+    //Default constructor
     public Contact() {
     }
 
