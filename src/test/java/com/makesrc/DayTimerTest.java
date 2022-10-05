@@ -156,7 +156,7 @@ public class DayTimerTest{
     @Test
     public void getAuthor() {
         if (Timer1.getAuthor() == null) {
-            fail("The author is not what was expected");
+            fail("The author has not been set");
         }
     }
 }
