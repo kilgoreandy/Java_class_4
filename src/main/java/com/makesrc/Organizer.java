@@ -79,8 +79,15 @@ public interface Organizer {
     /**
      * Gets the size of the Organizer
      */
-    public default int size() {
-        return 0;
-    }
+    public default int size() { 
+     return getAll.size(); 
+   }  
+ 
+   /** 
+    * Perform clean up or save state when application is about to close. 
+    *  
+    */ 
+   public default void close() { 
+   }; 
 
 }
