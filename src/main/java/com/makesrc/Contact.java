@@ -92,6 +92,6 @@ public class Contact {
 
     @Override
     public String toString() {
-        return "Contact Info: Contact(firstName-'" + this.firstName + "', lastName-" + this.lastName + "', email-'" + this.email + "', phone-'" + this.phone + ")'";
+        return "Contact Info: Contact(firstName-'" + this.firstName + "', lastName-'" + this.lastName + "', email-'" + this.email + "', phone-'" + this.phone + "',)";
     }
 }

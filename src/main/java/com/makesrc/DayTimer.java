@@ -69,7 +69,6 @@ public class DayTimer implements WhoDoneIt, Organizer {
         for (Contact contact : Contacts) {
             if (contact.getLastName().equals(lastName)) {
                 find.add(contact);
-                System.out.println(contact);
             }
         }
         return find;
