@@ -15,20 +15,25 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Create FileDay timer which extends from the already made Daytimer and implements both interfaces
+ */
 public class FileDayTimer extends DayTimer implements Organizer, WhoDoneIt {
     public FileDayTimer(File fileName) throws IOException {
         try {
+            //If the file exists use it if not create it
             if (fileName.createNewFile()) {
                 System.out.println("File created: " + fileName.getName());
             } else {
                 System.out.println("File already exists.");
             }
+            //see if error happened
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
     }
-
+    //Logic for opening the file
     public static List<Contact> open(File file) throws IOException {
         Scanner input = new Scanner(file);
         input.useDelimiter(",");
@@ -58,6 +63,8 @@ public class FileDayTimer extends DayTimer implements Organizer, WhoDoneIt {
             }
         return contacts;
         }
+
+        // logic for saving the list to the text file specified
         public static void save(File file, List<Contact> contact) throws IOException {
 
             try (PrintWriter pw = new PrintWriter(file)) {

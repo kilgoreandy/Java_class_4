@@ -87,6 +87,8 @@ public interface Organizer {
      * Perform clean up or save state when application is about to close.
      *
      */
-    public default void close() {};
+    public default void close() {
+
+    };
 
 }
